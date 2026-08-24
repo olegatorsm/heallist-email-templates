@@ -2,34 +2,53 @@
     templateType: email
     isAvailableForNewContent: true
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% if content.html_title and content.html_title != '' %}{{
-      content.html_title }}{% else %}{{ content.body.subject }}{% endif %}
-    </title>
+    <title>{% if content.html_title and content.html_title != "" %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
     {% include "./partials/email-styles.html" %}
   </head>
   <body bgcolor="#f0f0f2">
-    <div id="preview_text" style="display:none;font-size:1px;color:{{background_color}};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+    <div
+      id="preview_text"
+      style="
+        display: none;
+        font-size: 1px;
+        color: {{ background_color }};
+        line-height: 1px;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+      "
+    >
       {% text "preview_text" label="Preview Text", value="", no_wrapper=True %}
     </div>
     <table role="presentation" width="100%" bgcolor="#f0f0f2" cellpadding="0" cellspacing="0" border="0">
-      <tr><td class="page-cell" align="center" bgcolor="#f0f0f2">
-        <table role="presentation" class="email-shell" width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0">
-          {% include "./partials/header.html" %}
-          <tr><td class="email-body">
-            <p class="body-copy">We have successfully processed your request to cancel your subscription to the Empowered plan. Your account will revert to the free Essential plan at the end of your current billing cycle. You can switch back to the Empowered plan anytime from your <a class="text-link" href="https://app.heallist.com/billing/upgrade">Billing page</a>.</p>
-            <p class="body-copy copy-spacer">For any questions about our platform please visit our <a class="text-link" href="https://support.heallist.com/">Support Portal</a> or ask via Live Chat located at the bottom right corner of our website. For any feedback and feature requests please use the <a class="text-link" href="https://support.heallist.com/kb-tickets/new">Contact form</a>.</p>
-            <p class="body-copy copy-spacer">We love hearing from our valued members!</p>
-            <p class="body-copy copy-spacer">With grattitude,<br />Heallist Support Team</p>
-          </td></tr>
-          {% include "./partials/footer.html" %}
-        </table>
-      </td></tr>
+      <tr>
+        <td class="page-cell" align="center" bgcolor="#f0f0f2">
+          <table role="presentation" class="email-shell" width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0">
+            {% include "./partials/header.html" %}
+            <tr>
+              <td class="email-body">
+                <p class="body-copy">
+                  We have successfully processed your request to cancel your subscription to the Empowered plan. Your account will revert to the free Essential plan at the end of your current billing cycle. You can switch back to the
+                  Empowered plan anytime from your <a class="text-link" href="https://app.heallist.com/billing/upgrade">Billing page</a>.
+                </p>
+                <p class="body-copy copy-spacer">
+                  For any questions about our platform please visit our <a class="text-link" href="https://support.heallist.com/">Support Portal</a> or ask via Live Chat located at the bottom right corner of our website. For any feedback
+                  and feature requests please use the <a class="text-link" href="https://support.heallist.com/kb-tickets/new">Contact form</a>.
+                </p>
+                <p class="body-copy copy-spacer">We love hearing from our valued members!</p>
+                <p class="body-copy copy-spacer">With grattitude,<br />Heallist Support Team</p>
+              </td>
+            </tr>
+            {% include "./partials/footer.html" %}
+          </table>
+        </td>
+      </tr>
     </table>
   </body>
 </html>

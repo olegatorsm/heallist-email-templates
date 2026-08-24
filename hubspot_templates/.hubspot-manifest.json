@@ -7,27 +7,27 @@
   "files": {
     "healer-cancel-retreat-template.html": {
       "local_path": "healer-cancel-retreat-template.html",
-      "sha256": "67b933764433ea9eb6af5595708d39a1bec8a12707dcb5ecd86102111b3519d8",
-      "hubspot_hash": "17db51d9c7f15bf200603e635efe9132",
-      "updated_at": 1786537994242
+      "sha256": "dff7e1ab93a5123138dadf48ccf8c693267bfcc63cb20c826b3ef59f56cfc044",
+      "hubspot_hash": "b018458b22f9280b5c9b9153d60987c0",
+      "updated_at": 1787560408164
     },
     "healer-request-template.html": {
       "local_path": "healer-request-template.html",
-      "sha256": "d9d54305eb721fa9a122188370add6ca57865dfe7d0ead700dc9b3cf24590fce",
-      "hubspot_hash": "0ceadde770bdb9efca37468c40643f8e",
-      "updated_at": 1786538134173
+      "sha256": "2cbe05e7498298aa807333f6b9d5e62e33a5621962e06f27ecb97fa1184306b5",
+      "hubspot_hash": "d1fe718644a0d0c561d8c71b30eb7bac",
+      "updated_at": 1787560410936
     },
     "healer-cancel-template.html": {
       "local_path": "healer-cancel-template.html",
-      "sha256": "c3c001207218a3cb473285ff3b974eec6e487c07906617fa4c2e2ff847518dde",
-      "hubspot_hash": "4b90083fd917f808b4f6ae7488b9ed26",
-      "updated_at": 1786538025455
+      "sha256": "291c7d3b6b4cb18bd699645e5e232b3e7f7986a4ed970c5a2609aa1b40ebd872",
+      "hubspot_hash": "23bc5b2bbd76f90b914be551b0b43d9a",
+      "updated_at": 1787560409593
     },
     "client-transmission-template.html": {
       "local_path": "client-transmission-template.html",
-      "sha256": "65ef6d5fa73029014e57282a7e0c8807b90334fd8d14b1da644a7b0d56f52809",
-      "hubspot_hash": "d571c9a45ac2288e26cb9539031c60c0",
-      "updated_at": 1786537816960
+      "sha256": "17bbad3a0dd6fa8a8988f54be9f51b14d931fb4c8a9d50be1663db342d4311d8",
+      "hubspot_hash": "0172821b3241e585ce00e90fc8de22bd",
+      "updated_at": 1787560406807
     },
     "partials/header.html": {
       "local_path": "partials/header.html",
@@ -37,9 +37,9 @@
     },
     "partials/email-styles.html": {
       "local_path": "partials/email-styles.html",
-      "sha256": "6a8c517f1454a775f5bfb7545cc0812784caaf49dae52f1b006e3d3b10cec392",
-      "hubspot_hash": "51fd5ffd1eea50b847457c9df22d0577",
-      "updated_at": 1787513604502
+      "sha256": "f7a9af893ac2ffe2e6f7d5e51bc73c32b02837940656df1b1b8c51b6e64f7e5a",
+      "hubspot_hash": "b2f4fa1797b3983206023989864577f1",
+      "updated_at": 1787560418950
     },
     "partials/footer.html": {
       "local_path": "partials/footer.html",
@@ -55,39 +55,39 @@
     },
     "healer-template.html": {
       "local_path": "healer-template.html",
-      "sha256": "d83c94d25301f71b5d4c84af4fb395fd11b32fea08795f8814c95772f59428fb",
-      "hubspot_hash": "cfb89afa2edc48c6d2416b4c4ba7a374",
-      "updated_at": 1786538046344
+      "sha256": "f3f70e0417a19fa697b0f18d56c14fbc1ecbca4cc8cf8aa627832aa73174cf14",
+      "hubspot_hash": "7ef7d45174f360904a110f8b4832a2c0",
+      "updated_at": 1787560414925
     },
     "client-retreat-template.html": {
       "local_path": "client-retreat-template.html",
-      "sha256": "1b8e2bd7f7d7bbfe698c5779477e296090d7bc27b966e07d0e3be7e8c97790b8",
-      "hubspot_hash": "29c729dd4abfeec1497da8c00c26ad33",
-      "updated_at": 1786537968102
+      "sha256": "278885285d69b23d2f3dc9e80fd7120af067058754ff3f1efe85659a2c86cbae",
+      "hubspot_hash": "ad803b532cd3f1c810ad2fa266684986",
+      "updated_at": 1787561271413
     },
     "client-cancel-retreat-template-new.html": {
       "local_path": "client-cancel-retreat-template-new.html",
-      "sha256": "b5a3baebe294f3885fb45dceb2afe1124322435685657e867205b788af93f477",
-      "hubspot_hash": "9a566fdfbdcb8a7c23326e1ef40f9256",
-      "updated_at": 1786532706990
+      "sha256": "c0dc29e63d611c48430f605bcb61d6f2d95ada837fce2dcffc114c8eca241e0c",
+      "hubspot_hash": "d0511db9e7d0b549a3ab928dabe9a877",
+      "updated_at": 1787561262046
     },
     "healer-retreat-template.html": {
       "local_path": "healer-retreat-template.html",
-      "sha256": "1efaaea154acb21ef84e5d8c1b462d3e916e01268aa8c2a590d571c30f3a8477",
-      "hubspot_hash": "0480a0357e2915d12158a50a58fab92a",
-      "updated_at": 1786538112650
+      "sha256": "f2d4e32cadc5ee038bebfa0b1b9af94e83f29dd31c7d1c010cb65a9633fc9a73",
+      "hubspot_hash": "7a5700fdc1974973b17e0acd24a2004c",
+      "updated_at": 1787560413636
     },
     "charge-dispute-template.html": {
       "local_path": "charge-dispute-template.html",
-      "sha256": "124b101dc5ea8b4a122c8d85db6bb72e0f084e13e8179792c7b8d0aab66ae9df",
-      "hubspot_hash": "6c9f381e1ff16ea1bbbce75132d1a82b",
-      "updated_at": 1786531981109
+      "sha256": "c927c1a8e0902d8361ec1804e449330f640ecae1ac23638bbaab9db0a332ec71",
+      "hubspot_hash": "10372d5ebe2c969653bfd7bd458aff0b",
+      "updated_at": 1787561257862
     },
     "client-invitation.html": {
       "local_path": "client-invitation.html",
-      "sha256": "8f827e4e98a148b6a1f7971aebf9d95632aee74ee7fc3ae7cfd6932656c84bcd",
-      "hubspot_hash": "e7bdd2db9bf7d253df65fd6e14e4e3ac",
-      "updated_at": 1786534978641
+      "sha256": "9cc8ae5b4b7825a1ed029d97f4c9fb4258686ef0d2ff0b7c294dc10b06fd6818",
+      "hubspot_hash": "4d47d9f779cf3e263111e76ad9102272",
+      "updated_at": 1787561267464
     },
     "footer.html": {
       "local_path": "footer.html",
@@ -97,21 +97,21 @@
     },
     "client-transmission-cancel-template.html": {
       "local_path": "client-transmission-cancel-template.html",
-      "sha256": "f629ed3fb2dfefb8d77c195a88b27be9b8bf1f92f1e27c072e3f3b9f0d891bff",
-      "hubspot_hash": "098ed6e206ef0cf432a1521cce030a6b",
-      "updated_at": 1786537889507
+      "sha256": "d1cfbea59f3c47d74db5f8af56444cec7ae3e873177f0c0cf5cdca60bb607741",
+      "hubspot_hash": "1e7eac539ed63207cc9c57321cbc5559",
+      "updated_at": 1787560405404
     },
     "healer-rescheduling.html": {
       "local_path": "healer-rescheduling.html",
-      "sha256": "387ed6c89a428a57b8dbb501a4aa4aa213ae347dac2c0853b2925dab11292efd",
-      "hubspot_hash": "a6ede3f932da3864270d0d880ba839ee",
-      "updated_at": 1786538070885
+      "sha256": "4a326f906006d79508a7d27eef6a14522be571c9fb02c5cf1deab4d2054f9767",
+      "hubspot_hash": "7d23a7e9c4fa2010a05f276bac61e857",
+      "updated_at": 1787560412262
     },
     "client-request-reminder-template.html": {
       "local_path": "client-request-reminder-template.html",
-      "sha256": "75e5f7f6282847e6df8c8ed5c5b4952657ec0ff884cbc9ef3e0db36529c37a9d",
-      "hubspot_hash": "96fd3b955dce364030c47caafb11e47d",
-      "updated_at": 1786537782654
+      "sha256": "342ed5ddf9e340406a4e949c0c61391c749bc9e08034ef892d7fae21e56bc959",
+      "hubspot_hash": "3226e5aa8963ddc815394921485256cb",
+      "updated_at": 1787561268713
     },
     "message-recieved-with-header.html": {
       "local_path": "message-recieved-with-header.html",
@@ -121,15 +121,15 @@
     },
     "client-cancel-retreat-template.html": {
       "local_path": "client-cancel-retreat-template.html",
-      "sha256": "b57f53521a956d8de83bf08ae4ff71aea77b90229956ea3b82d3d619c83abf68",
-      "hubspot_hash": "6a82d22732ecbe5b4a2c2f5a93a23b04",
-      "updated_at": 1786538194159
+      "sha256": "ea7f5ff1c0179951073ff81d59baf8590680cd699434ebe5acfa47cf16fb80a1",
+      "hubspot_hash": "c495bf47268575246e90c0c439abace6",
+      "updated_at": 1787561263386
     },
     "client-appointment-completed.html": {
       "local_path": "client-appointment-completed.html",
-      "sha256": "edba0549cd21cba4e3d08b9ce26cd0654e6eacdfeaff279cb567222f57b2ac96",
-      "hubspot_hash": "95aa1f45c40d60c55529db20283e1510",
-      "updated_at": 1786531709467
+      "sha256": "b4077a18b5ee3f983c7e03a07b82656521a821f9e8cd5582844f73ab8eaeb697",
+      "hubspot_hash": "8c213f59245658d51f899fb1a1ca61c0",
+      "updated_at": 1787561260430
     },
     "transmission-message.html": {
       "local_path": "transmission-message.html",
@@ -139,15 +139,15 @@
     },
     "client-gift-card-purchased.html": {
       "local_path": "client-gift-card-purchased.html",
-      "sha256": "8bab821f245bb10c5eb7a570ce8a4a163594cad41e77d458d19066abb6c69748",
-      "hubspot_hash": "ac9eaafdc73977cea9a2a9c722137192",
-      "updated_at": 1786534980210
+      "sha256": "f730b9a7c3dd28007facc376b50fa12e24940d11310c6f0d2ccbcb1f838cf5fa",
+      "hubspot_hash": "9a7e314259ebcc430d3345b92cc36234",
+      "updated_at": 1787561266193
     },
     "client-cancel-template.html": {
       "local_path": "client-cancel-template.html",
-      "sha256": "f59ef9c98e2be210e3897aed98d764602a6a9dfcbf6248b4f4b223cc4e756c0a",
-      "hubspot_hash": "aad92c18c2891050a69e654af3be4db6",
-      "updated_at": 1786537864791
+      "sha256": "b96ded9ac7051804458cb9debd240137390636def92dda712250ac05725e534a",
+      "hubspot_hash": "c9b90ceb864e669974d3c044058fc7dd",
+      "updated_at": 1787561264782
     },
     "healer-subscription-canceled.html": {
       "local_path": "healer-subscription-canceled.html",
@@ -163,27 +163,27 @@
     },
     "charge-failed.html": {
       "local_path": "charge-failed.html",
-      "sha256": "d95f3aa9f553b2da123a8dc7f1ccb8ea957d225d38097d1462621ab744b03cde",
-      "hubspot_hash": "d0b45cd9571fb8de9d464faf12bbb47b",
-      "updated_at": 1786532275032
+      "sha256": "c57e8a852d9aff21df7558c547296f6ec99afa7e3fa4d65f169fb44033751cf9",
+      "hubspot_hash": "ef30876ad86b43f08d69f18b1f26f181",
+      "updated_at": 1787561259153
     },
     "client-template.html": {
       "local_path": "client-template.html",
-      "sha256": "24a7ec700d410d40f91bc830c0521d8b91865ff8b61b53eb6440f259b52a1811",
-      "hubspot_hash": "fee15df83d4e9bb97896bec0a148a595",
-      "updated_at": 1786537740149
+      "sha256": "94012f13e704a7982db0878ae72f4bd398c03719320db484dd3c05eaaee280ab",
+      "hubspot_hash": "5a7706b3c1aa62178034f79a0935ef76",
+      "updated_at": 1787561272667
     },
     "healer-transmission-cancel-template.html": {
       "local_path": "healer-transmission-cancel-template.html",
-      "sha256": "d6286388c2748401fa48210403905ee001554adfd37e4eaf79023c112ba73abc",
-      "hubspot_hash": "ba5cfe3f19d2a513f6d86e3078517e8c",
-      "updated_at": 1786538096423
+      "sha256": "0392abf7f4de4ca61f5d23c689abb77b85f420e2d482ffa50586ae33eaa7a2a9",
+      "hubspot_hash": "ceca6af499572b24b5f126aa45c1d500",
+      "updated_at": 1787560416302
     },
     "client-request-rescheduling.html": {
       "local_path": "client-request-rescheduling.html",
-      "sha256": "efa2db39d679267421c05aacc2f97761f163d8d74278bf6c52c5b20d64bc42bd",
-      "hubspot_hash": "a378143e98363d2552f4892ee5cf5708",
-      "updated_at": 1786537838141
+      "sha256": "e78acaa8f5c024948f24bb040c933c445522856fa452544b740c8b64f5ef75d5",
+      "hubspot_hash": "28eecf8d2ca54ee9e130a5eb509982fe",
+      "updated_at": 1787561269936
     },
     "healer-template-with-header.html": {
       "local_path": "healer-template-with-header.html",
@@ -205,9 +205,9 @@
     },
     "healer-transmission-template.html": {
       "local_path": "healer-transmission-template.html",
-      "sha256": "cc2b3c960597fb28ec69a0ceb596921fcb1ec38bda6e2a0d266ae2cef136f0ff",
-      "hubspot_hash": "9b1617bb6983fd39a8f1bfd70470b9a9",
-      "updated_at": 1786538151548
+      "sha256": "0025b25afa2c46cb1b6debe9982e05fe3e1d23b954237056d9fa016d4c14e1b6",
+      "hubspot_hash": "44d2d68bf4e03b0f43587288c781c861",
+      "updated_at": 1787560417589
     },
     "healer-gift-card-purchased.html": {
       "local_path": "healer-gift-card-purchased.html",

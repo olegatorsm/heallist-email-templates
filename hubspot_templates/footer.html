@@ -4,12 +4,22 @@
 -->
 <!-- Begin partial -->
 <footer>
-    <footer style="margin-top: 70px;padding-top:17px;border-top: 1px solid #6E6D7A;text-align: center;font-size: 10px;">
-      This message was sent to you because you’re a user of <a target="_blank" href="https://www.heallist.com/">Heallist.com.</a> You can <a href="{{unsubscribe_link}}" >Unsubscribe</a> from  emails. <br/> <a target="_blank" href="https://www.heallist.com/privacy-policy">Privacy Policy.</a> <a target="_blank" href="https://support.heallist.com/">Support Portal.</a> <br/>
-© 2023 Heallist Inc., All rights reserved.<br />        
-      {{site_settings.company_name}}, {{site_settings.company_city}}, {{site_settings.company_state}},{{site_settings.company_street_address_1}}
-    
-      
-    </footer>
+  <footer
+    style="
+      margin-top: 70px;
+      padding-top: 17px;
+      border-top: 1px solid #6e6d7a;
+      text-align: center;
+      font-size: 10px;
+    "
+  >
+    This message was sent to you because you’re a user of
+    <a target="_blank" href="https://www.heallist.com/">Heallist.com.</a> You can <a href="{{ unsubscribe_link }}">Unsubscribe</a> from emails. <br />
+    <a target="_blank" href="https://www.heallist.com/privacy-policy">Privacy Policy.</a>
+    <a target="_blank" href="https://support.heallist.com/">Support Portal.</a>
+    <br />
+    © 2023 Heallist Inc., All rights reserved.<br />
+    {{ site_settings.company_name }}, {{ site_settings.company_city }}, {{ site_settings.company_state }},{{ site_settings.company_street_address_1 }}
+  </footer>
 </footer>
 <!-- End partial -->

@@ -1,0 +1,11 @@
+{
+  "name": "heallist-email-templates",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write 'hubspot_templates/**/*.html'",
+    "format:check": "prettier --check 'hubspot_templates/**/*.html'"
+  },
+  "devDependencies": {
+    "prettier": "2.8.8"
+  }
+}

@@ -2,24 +2,29 @@
     templateType: email
     isAvailableForNewContent: true
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% if content.html_title and content.html_title != '' %}{{
-      content.html_title }}{% else %}{{ content.body.subject }}{% endif %}
-    </title>
+    <title>{% if content.html_title and content.html_title != "" %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
     {% if content.meta_description %}
     <meta name="description" content="{{ content.meta_description }}" />
-    {% endif %}
-    {% include "./partials/email-styles.html" %}
+    {% endif %} {% include "./partials/email-styles.html" %}
   </head>
   <body bgcolor="#f0f0f2">
     <div
       id="preview_text"
-      style="display:none;font-size:1px;color:{{background_color}};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;"
+      style="
+        display: none;
+        font-size: 1px;
+        color: {{ background_color }};
+        line-height: 1px;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+      "
     >
       {% text "preview_text" label="Preview Text", value="", no_wrapper=True %}
     </div>
@@ -31,21 +36,12 @@
             {% include "./partials/header.html" %}
             <tr>
               <td class="email-body">
-                <p class="body-copy">Hi {{custom.healerName}},</p>
-                <p class="body-copy copy-spacer">
-                  {{custom.clientName}} just shared a new journal entry with you
-                  for {{custom.serviceName}}.
-                </p>
-                <p class="body-copy copy-spacer">
-                  You can view it anytime by clicking on the session detail
-                  screen from your Bookings page.
-                </p>
-                <p class="body-copy copy-spacer">
-                  This shared entry may offer helpful insights for your ongoing
-                  work together.
-                </p>
+                <p class="body-copy">Hi {{ custom.healerName }},</p>
+                <p class="body-copy copy-spacer">{{ custom.clientName }} just shared a new journal entry with you for {{ custom.serviceName }}.</p>
+                <p class="body-copy copy-spacer">You can view it anytime by clicking on the session detail screen from your Bookings page.</p>
+                <p class="body-copy copy-spacer">This shared entry may offer helpful insights for your ongoing work together.</p>
                 <div class="action-row">
-                  <a class="action-button" href="{{custom.link}}" target="_blank">
+                  <a class="action-button" href="{{ custom.link }}" target="_blank">
                     <span style="color: #ffffff">View Journal Entry</span>
                   </a>
                 </div>

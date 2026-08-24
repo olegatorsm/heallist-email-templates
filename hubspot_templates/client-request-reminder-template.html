@@ -2,153 +2,109 @@
     templateType: email
     isAvailableForNewContent: true
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% if content.html_title and content.html_title != '' %}{{
-      content.html_title }}{% else %}{{ content.body.subject }}{% endif %}
-    </title>
+    <title>{% if content.html_title and content.html_title != "" %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
     {% if content.meta_description %}
     <meta name="description" content="{{ content.meta_description }}" />
-    {% endif %}
-    {% include "./partials/email-styles.html" %}
+    {% endif %} {% include "./partials/email-styles.html" %}
   </head>
   <body bgcolor="#f0f0f2">
     <div
       id="preview_text"
-      style="display:none;font-size:1px;color:{{background_color}};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;"
+      style="
+        display: none;
+        font-size: 1px;
+        color: {{ background_color }};
+        line-height: 1px;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+      "
     >
       {% text "preview_text" label="Preview Text", value="", no_wrapper=True %}
     </div>
 
-    <table
-      role="presentation"
-      width="100%"
-      bgcolor="#f0f0f2"
-      cellpadding="0"
-      cellspacing="0"
-      border="0"
-    >
+    <table role="presentation" width="100%" bgcolor="#f0f0f2" cellpadding="0" cellspacing="0" border="0">
       <tr>
         <td class="page-cell" align="center" bgcolor="#f0f0f2">
-          <table
-            role="presentation"
-            class="email-shell"
-            width="600"
-            bgcolor="#ffffff"
-            cellpadding="0"
-            cellspacing="0"
-            border="0"
-          >
+          <table role="presentation" class="email-shell" width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0">
             {% include "./partials/header.html" %}
             <tr>
               <td class="email-body">
-                <p class="greeting-title">Hi {{custom.clientUsername}}</p>
-                <p class="body-copy muted-copy copy-spacer">{{custom.description}}</p>
-                <p class="body-title copy-spacer">
-                  {{custom.appointmentName}}
-                </p>
-                <table
-                  role="presentation"
-                  class="detail-table appointment-detail-table"
-                  width="100%"
-                  cellpadding="0"
-                  cellspacing="0"
-                  border="0"
-                >
+                <p class="greeting-title">Hi {{ custom.clientUsername }}</p>
+                <p class="body-copy muted-copy copy-spacer">{{ custom.description }}</p>
+                <p class="body-title copy-spacer">{{ custom.appointmentName }}</p>
+                <table role="presentation" class="detail-table appointment-detail-table" width="100%" cellpadding="0" cellspacing="0" border="0">
                   <tr class="detail-row-first">
                     <th scope="row" class="detail-label">Date</th>
                     <td class="detail-value">
-                      {{custom.appointmentDate}}
-                      <a
-                        class="text-link"
-                        href="{{custom.calendarUrl}}"
-                        target="_blank"
-                        >[Add to calendar]</a
-                      >
+                      {{ custom.appointmentDate }}
+                      <a class="text-link" href="{{ custom.calendarUrl }}" target="_blank">[Add to calendar]</a>
                     </td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Time</th>
-                    <td class="detail-value">{{custom.appointmentTime}}</td>
+                    <td class="detail-value">{{ custom.appointmentTime }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Duration</th>
-                    <td class="detail-value">
-                      {{custom.appointmentDuration}}
-                    </td>
+                    <td class="detail-value">{{ custom.appointmentDuration }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Type</th>
-                    <td class="detail-value">{{custom.appointmentType}}</td>
+                    <td class="detail-value">{{ custom.appointmentType }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Location</th>
-                    <td class="detail-value">
-                      {{custom.appointmentLocation}}
-                    </td>
+                    <td class="detail-value">{{ custom.appointmentLocation }}</td>
                   </tr>
-                  <tr class="{{custom.addressClassName}}">
+                  <tr class="{{ custom.addressClassName }}">
                     <th scope="row" class="detail-label">Address</th>
-                    <td class="detail-value">{{custom.addressText}}</td>
+                    <td class="detail-value">{{ custom.addressText }}</td>
                   </tr>
-                  {% if custom.platformName and custom.platformName != '' %}
-                  <tr class="{{custom.platformClassName}}">
-                    <th scope="row" class="detail-label">
-                      {{custom.platformKey}}
-                    </th>
-                    {% if custom.platformLink and custom.platformLink != '' %}
+                  {% if custom.platformName and custom.platformName != "" %}
+                  <tr class="{{ custom.platformClassName }}">
+                    <th scope="row" class="detail-label">{{ custom.platformKey }}</th>
+                    {% if custom.platformLink and custom.platformLink != "" %}
                     <td class="detail-value">
-                      <a
-                        class="text-link"
-                        href="{{custom.platformLink}}"
-                        target="_blank"
-                        >{{custom.platformName}}</a
-                      >
+                      <a class="text-link" href="{{ custom.platformLink }}" target="_blank">{{ custom.platformName }}</a>
                     </td>
-                    {% endif %} {% if !custom.platformLink or
-                    custom.platformLink == '' %}
-                    <td class="detail-value">{{custom.platformName}}</td>
+                    {% endif %} {% if not custom.platformLink or custom.platformLink == "" %}
+                    <td class="detail-value">{{ custom.platformName }}</td>
                     {% endif %}
                   </tr>
                   {% endif %}
                   <tr>
                     <th scope="row" class="detail-label">Practitioner</th>
-                    <td class="detail-value">{{custom.healerFullName}}</td>
+                    <td class="detail-value">{{ custom.healerFullName }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Amount</th>
-                    <td class="detail-value">{{custom.appointmentCost}}</td>
+                    <td class="detail-value">{{ custom.appointmentCost }}</td>
                   </tr>
-                  {% if custom.status and custom.status != '' %}
+                  {% if custom.status and custom.status != "" %}
                   <tr>
                     <th scope="row" class="detail-label">Status</th>
-                    <td class="detail-value">{{custom.status}}</td>
+                    <td class="detail-value">{{ custom.status }}</td>
                   </tr>
-                  {% endif %} {% if custom.paymentMethod and custom.paymentMethod
-                  != '' %}
+                  {% endif %} {% if custom.paymentMethod and custom.paymentMethod != "" %}
                   <tr>
                     <th scope="row" class="detail-label">Payment Method</th>
-                    <td class="detail-value">{{custom.paymentMethod}}</td>
+                    <td class="detail-value">{{ custom.paymentMethod }}</td>
                   </tr>
                   {% endif %}
                 </table>
                 <div class="action-row-centered">
-                  <a
-                    class="action-button action-button-wide"
-                    href="{{custom.requestUrl}}"
-                    target="_blank"
-                  >
-                    <span style="color: #ffffff">{{custom.submit}}</span>
+                  <a class="action-button action-button-wide" href="{{ custom.requestUrl }}" target="_blank">
+                    <span style="color: #ffffff">{{ custom.submit }}</span>
                   </a>
                 </div>
-                <p class="policy-text">
-                  CANCELLATION POLICY: Cancellations made less than 24 hours
-                  prior to the session start time are not refundable.
-                </p>
+                <p class="policy-text">CANCELLATION POLICY: Cancellations made less than 24 hours prior to the session start time are not refundable.</p>
               </td>
             </tr>
             {% include "./partials/footer.html" %}

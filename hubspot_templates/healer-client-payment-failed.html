@@ -2,24 +2,29 @@
     templateType: email
     isAvailableForNewContent: true
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% if content.html_title and content.html_title != '' %}{{
-      content.html_title }}{% else %}{{ content.body.subject }}{% endif %}
-    </title>
+    <title>{% if content.html_title and content.html_title != "" %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
     {% if content.meta_description %}
     <meta name="description" content="{{ content.meta_description }}" />
-    {% endif %}
-    {% include "./partials/email-styles.html" %}
+    {% endif %} {% include "./partials/email-styles.html" %}
   </head>
   <body bgcolor="#f0f0f2">
     <div
       id="preview_text"
-      style="display:none;font-size:1px;color:{{background_color}};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;"
+      style="
+        display: none;
+        font-size: 1px;
+        color: {{ background_color }};
+        line-height: 1px;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+      "
     >
       {% text "preview_text" label="Preview Text", value="", no_wrapper=True %}
     </div>
@@ -31,13 +36,11 @@
             {% include "./partials/header.html" %}
             <tr>
               <td class="email-body">
-                <p class="greeting-title">Hi {{custom.healerUsername}}</p>
-                <div class="body-copy copy-spacer">
-                  {% raw %}{{custom.description}}{% endraw %}
-                </div>
+                <p class="greeting-title">Hi {{ custom.healerUsername }}</p>
+                <div class="body-copy copy-spacer">{% raw %}{{custom.description}}{% endraw %}</div>
                 <div class="action-row-centered">
-                  <a class="action-button action-button-wide" href="{{custom.url}}" target="_blank">
-                    <span style="color: #ffffff">{{custom.submit}}</span>
+                  <a class="action-button action-button-wide" href="{{ custom.url }}" target="_blank">
+                    <span style="color: #ffffff">{{ custom.submit }}</span>
                   </a>
                 </div>
               </td>

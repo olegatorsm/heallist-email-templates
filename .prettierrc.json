@@ -1,0 +1,18 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "printWidth": 240,
+  "singleQuote": true,
+  "htmlWhitespaceSensitivity": "css",
+  "singleAttributePerLine": false,
+  "proseWrap": "never",
+  "embeddedLanguageFormatting": "off",
+  "overrides": [
+    {
+      "files": "hubspot_templates/**/*.html",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
+}

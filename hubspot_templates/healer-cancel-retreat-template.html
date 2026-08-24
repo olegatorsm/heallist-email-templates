@@ -2,24 +2,29 @@
     templateType: email
     isAvailableForNewContent: true
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% if content.html_title and content.html_title != '' %}{{
-      content.html_title }}{% else %}{{ content.body.subject }}{% endif %}
-    </title>
+    <title>{% if content.html_title and content.html_title != "" %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
     {% if content.meta_description %}
     <meta name="description" content="{{ content.meta_description }}" />
-    {% endif %}
-    {% include "./partials/email-styles.html" %}
+    {% endif %} {% include "./partials/email-styles.html" %}
   </head>
   <body bgcolor="#f0f0f2">
     <div
       id="preview_text"
-      style="display:none;font-size:1px;color:{{background_color}};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;"
+      style="
+        display: none;
+        font-size: 1px;
+        color: {{ background_color }};
+        line-height: 1px;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+      "
     >
       {% text "preview_text" label="Preview Text", value="", no_wrapper=True %}
     </div>
@@ -31,54 +36,56 @@
             {% include "./partials/header.html" %}
             <tr>
               <td class="email-body">
-                <p class="greeting-title">Hi {{custom.healerFullName}}</p>
-                <p class="body-copy muted-copy copy-spacer">{{custom.description}}</p>
-                <p class="body-title copy-spacer">{{custom.appointmentName}}</p>
+                <p class="greeting-title">Hi {{ custom.healerFullName }}</p>
+                <p class="body-copy muted-copy copy-spacer">{{ custom.description }}</p>
+                <p class="body-title copy-spacer">{{ custom.appointmentName }}</p>
                 <table role="presentation" class="detail-table appointment-detail-table" width="100%" cellpadding="0" cellspacing="0" border="0">
                   <tr class="detail-row-first">
                     <th scope="row" class="detail-label">Date/s</th>
-                    <td class="detail-value pre-wrap">{{custom.appointmentDate}}</td>
+                    <td class="detail-value pre-wrap">{{ custom.appointmentDate }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Type</th>
-                    <td class="detail-value">{{custom.appointmentType}}</td>
+                    <td class="detail-value">{{ custom.appointmentType }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Package</th>
-                    <td class="detail-value">{{custom.appointmentPackage}}</td>
+                    <td class="detail-value">{{ custom.appointmentPackage }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Cost</th>
-                    <td class="detail-value">{{custom.appointmentCost}}</td>
+                    <td class="detail-value">{{ custom.appointmentCost }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Location</th>
-                    <td class="detail-value">{{custom.appointmentLocation}}</td>
+                    <td class="detail-value">{{ custom.appointmentLocation }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Client</th>
-                    <td class="detail-value">{{custom.clientUsername}}</td>
+                    <td class="detail-value">{{ custom.clientUsername }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Email</th>
-                    <td class="detail-value"><a class="email-link" href="mailto:{{custom.clientEmail}}">{{custom.clientEmail}}</a></td>
+                    <td class="detail-value">
+                      <a class="email-link" href="mailto:{{ custom.clientEmail }}">{{ custom.clientEmail }}</a>
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Phone</th>
-                    <td class="detail-value">{{custom.clientPhone}}</td>
+                    <td class="detail-value">{{ custom.clientPhone }}</td>
                   </tr>
                   <tr>
                     <th scope="row" class="detail-label">Notes</th>
-                    <td class="detail-value pre-wrap">{{custom.notes}}</td>
+                    <td class="detail-value pre-wrap">{{ custom.notes }}</td>
                   </tr>
                   <tr class="detail-row-last">
                     <th scope="row" class="detail-label">Cancellation reason</th>
-                    <td class="detail-value pre-wrap">{{custom.cancelReason}}</td>
+                    <td class="detail-value pre-wrap">{{ custom.cancelReason }}</td>
                   </tr>
                 </table>
                 <div class="action-row-centered">
-                  <a class="action-button action-button-wide" href="{{custom.confirmRequestUrl}}" target="_blank">
-                    <span style="color: #ffffff">{{custom.submit}}</span>
+                  <a class="action-button action-button-wide" href="{{ custom.confirmRequestUrl }}" target="_blank">
+                    <span style="color: #ffffff">{{ custom.submit }}</span>
                   </a>
                 </div>
               </td>

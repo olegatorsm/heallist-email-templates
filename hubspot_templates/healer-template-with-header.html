@@ -2,34 +2,52 @@
     templateType: email
     isAvailableForNewContent: true
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% if content.html_title and content.html_title != '' %}{{
-      content.html_title }}{% else %}{{ content.body.subject }}{% endif %}
-    </title>
-    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}" />{% endif %}
-    {% include "./partials/email-styles.html" %}
+    <title>{% if content.html_title and content.html_title != "" %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    {% if content.meta_description %}
+    <meta name="description" content="{{ content.meta_description }}" />
+    {% endif %} {% include "./partials/email-styles.html" %}
   </head>
   <body bgcolor="#f0f0f2">
-    <div id="preview_text" style="display:none;font-size:1px;color:{{background_color}};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">{% text "preview_text" label="Preview Text", value="", no_wrapper=True %}</div>
+    <div
+      id="preview_text"
+      style="
+        display: none;
+        font-size: 1px;
+        color: {{ background_color }};
+        line-height: 1px;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+      "
+    >
+      {% text "preview_text" label="Preview Text", value="", no_wrapper=True %}
+    </div>
     <table role="presentation" width="100%" bgcolor="#f0f0f2" cellpadding="0" cellspacing="0" border="0">
-      <tr><td class="page-cell" align="center" bgcolor="#f0f0f2">
-        <table role="presentation" class="email-shell" width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0">
-          {% include "./partials/header.html" %}
-          <tr><td class="email-body">
-            <div class="dynamic-content">{% raw %}{{custom.header}}{% endraw %}</div>
-            <p class="greeting-title copy-spacer">Hi {{custom.healerUsername}}</p>
-            <div class="body-copy copy-spacer">{% raw %}{{custom.description}}{% endraw %}</div>
-            <div class="action-row-centered"><a class="action-button action-button-wide" href="{{custom.url}}"><span style="color: #ffffff">{{custom.submit}}</span></a></div>
-            <div class="body-copy copy-spacer">{% raw %}{{custom.postButtonDescription}}{% endraw %}</div>
-          </td></tr>
-          {% include "./partials/footer.html" %}
-        </table>
-      </td></tr>
+      <tr>
+        <td class="page-cell" align="center" bgcolor="#f0f0f2">
+          <table role="presentation" class="email-shell" width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0">
+            {% include "./partials/header.html" %}
+            <tr>
+              <td class="email-body">
+                <div class="dynamic-content">{% raw %}{{custom.header}}{% endraw %}</div>
+                <p class="greeting-title copy-spacer">Hi {{ custom.healerUsername }}</p>
+                <div class="body-copy copy-spacer">{% raw %}{{custom.description}}{% endraw %}</div>
+                <div class="action-row-centered">
+                  <a class="action-button action-button-wide" href="{{ custom.url }}"><span style="color: #ffffff">{{ custom.submit }}</span></a>
+                </div>
+                <div class="body-copy copy-spacer">{% raw %}{{custom.postButtonDescription}}{% endraw %}</div>
+              </td>
+            </tr>
+            {% include "./partials/footer.html" %}
+          </table>
+        </td>
+      </tr>
     </table>
   </body>
 </html>
