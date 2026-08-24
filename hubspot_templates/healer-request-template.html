@@ -40,7 +40,7 @@
               </tr>
               {% endif %}
               <tr><th scope="row" class="detail-label">Client</th><td class="detail-value">{{custom.clientUsername}}</td></tr>
-              <tr><th scope="row" class="detail-label">Email</th><td class="detail-value">{{custom.clientEmail}}</td></tr>
+              <tr><th scope="row" class="detail-label">Email</th><td class="detail-value"><a class="email-link" href="mailto:{{custom.clientEmail}}">{{custom.clientEmail}}</a></td></tr>
               <tr><th scope="row" class="detail-label">Phone</th><td class="detail-value">{{custom.clientPhone}}</td></tr>
               <tr class="detail-row-last"><th scope="row" class="detail-label">Notes</th><td class="detail-value pre-wrap">{{custom.notes}}</td></tr>
             </table>
