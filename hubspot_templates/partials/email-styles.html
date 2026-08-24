@@ -1,0 +1,378 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: false
+-->
+<style>
+  body,
+  table,
+  td,
+  p,
+  a {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f2;
+    color: #231a17;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-cell {
+    padding: 24px;
+  }
+
+  .email-shell {
+    width: 600px;
+    max-width: 600px;
+    overflow: hidden;
+    border: 1px solid #e4e2e2;
+    border-radius: 16px;
+    background-color: #ffffff;
+  }
+
+  .header {
+    padding: 40px 56px 8px;
+  }
+
+  .email-body {
+    padding: 24px 56px 36px;
+  }
+
+  .body-copy {
+    color: #231a17;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .body-title {
+    color: #231a17;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    font-style: normal;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .greeting-title {
+    color: #231a17;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    font-style: normal;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .dynamic-content h1,
+  .dynamic-content h2 {
+    margin: 0;
+    color: #231a17;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .copy-spacer {
+    margin-top: 12px;
+  }
+
+  .muted-copy {
+    color: #655d5b;
+  }
+
+  .text-link {
+    color: #c06c60 !important;
+    font-weight: 600;
+    text-decoration: underline;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+  }
+
+  .detail-table {
+    width: 100%;
+  }
+
+  .detail-label,
+  .detail-value {
+    padding-top: 0;
+    padding-bottom: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    line-height: 20px;
+    vertical-align: top;
+  }
+
+  .detail-label {
+    width: 140px;
+    padding-right: 20px;
+    color: #655d5b;
+    text-align: right;
+  }
+
+  .detail-value {
+    color: #231a17;
+    overflow-wrap: anywhere;
+  }
+
+  .appointment-detail-table .detail-label {
+    width: 120px;
+  }
+
+  .pre-wrap {
+    white-space: pre-wrap;
+  }
+
+  .previous-value {
+    display: block;
+    color: #655d5b;
+    text-decoration: line-through;
+  }
+
+  .updated-value {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .detail-row-first .detail-label,
+  .detail-row-first .detail-value {
+    padding-top: 24px;
+  }
+
+  .detail-row-last .detail-label,
+  .detail-row-last .detail-value {
+    padding-bottom: 0;
+  }
+
+  .action-row {
+    padding-top: 16px;
+  }
+
+  .action-row-centered {
+    padding-top: 32px;
+    text-align: center;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 32px;
+  }
+
+  .action-buttons .action-button {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .action-button {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #c27571;
+    color: #ffffff !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+  .action-button-wide {
+    width: 168px;
+    box-sizing: border-box;
+  }
+
+  .action-button-secondary {
+    border: 1px solid #c27571;
+    background-color: #ffffff;
+    color: #c27571 !important;
+  }
+
+  .helper-text {
+    margin-top: 12px;
+    color: #655d5b;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+  }
+
+  .content-list {
+    margin: 16px 0 0;
+    padding-left: 24px;
+    color: #231a17;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .content-list li {
+    padding-bottom: 8px;
+  }
+
+  .policy-text {
+    margin: 0;
+    padding-top: 28px;
+    color: #655d5b;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .fine-print {
+    margin: 0;
+    padding-top: 28px;
+    color: #655d5b;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .fine-print p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+  }
+
+  .fine-print-spacer {
+    margin: 0;
+    padding-top: 6px;
+  }
+
+  .chip {
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .chip-error {
+    background-color: #a33;
+    color: #ffcaca;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .footer {
+    padding: 0 56px 40px;
+    color: #afaaa9;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .footer-divider {
+    padding-top: 28px;
+    border-top: 1px solid #e4e2e2;
+  }
+
+  .social-icon-cell {
+    padding: 0 8px 22px;
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer a {
+    color: #afaaa9 !important;
+    text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 620px) {
+    .page-cell {
+      padding: 0 !important;
+    }
+
+    .email-shell {
+      width: 100% !important;
+      border-right: 0 !important;
+      border-left: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    .header {
+      padding-right: 20px !important;
+      padding-left: 20px !important;
+    }
+
+    .email-body {
+      padding-right: 20px !important;
+      padding-left: 20px !important;
+    }
+
+    .greeting-title {
+      font-size: 20px !important;
+      line-height: 24px !important;
+    }
+
+    .dynamic-content h1,
+    .dynamic-content h2 {
+      font-size: 20px !important;
+      line-height: 24px !important;
+    }
+
+    .body-title {
+      font-size: 18px !important;
+      line-height: 22px !important;
+    }
+
+    .detail-table {
+      table-layout: fixed !important;
+    }
+
+    .detail-table .detail-label {
+      width: 34% !important;
+      padding-right: 12px !important;
+      text-align: left !important;
+    }
+
+    .detail-table .detail-value {
+      width: 66% !important;
+    }
+
+    .action-buttons {
+      display: block !important;
+    }
+
+    .action-buttons .action-button {
+      display: block !important;
+      width: 100% !important;
+    }
+
+    .action-buttons .action-button + .action-button {
+      margin-top: 12px !important;
+    }
+
+    .footer {
+      padding-right: 20px !important;
+      padding-left: 20px !important;
+    }
+  }
+</style>
