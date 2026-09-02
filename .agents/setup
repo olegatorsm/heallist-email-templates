@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "[setup] Installing Node.js dependencies"
+time npm ci --no-audit --no-fund
+
+echo "[setup] Installing Python dependencies"
+time python3 -m pip install \
+  --disable-pip-version-check \
+  --no-input \
+  --user \
+  --requirement requirements.txt
+
+echo "[setup] Repository dependencies are ready"
