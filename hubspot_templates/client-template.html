@@ -104,10 +104,12 @@
                     <th scope="row" class="detail-label">Phone</th>
                     <td class="detail-value">{{ custom.healerPhone }}</td>
                   </tr>
+                  {% if custom.notes and custom.notes != "" %}
                   <tr class="detail-row-last">
                     <th scope="row" class="detail-label">Notes</th>
                     <td class="detail-value pre-wrap">{{ custom.notes }}</td>
                   </tr>
+                  {% endif %}
                 </table>
                 <div class="action-row-centered">
                   <a class="action-button action-button-wide" href="{{ custom.requestUrl }}" target="_blank">

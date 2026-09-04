@@ -89,10 +89,12 @@
                     <th scope="row" class="detail-label">Phone</th>
                     <td class="detail-value">{{ custom.clientPhone }}</td>
                   </tr>
+                  {% if custom.notes and custom.notes != "" %}
                   <tr>
                     <th scope="row" class="detail-label">Notes</th>
                     <td class="detail-value pre-wrap">{{ custom.notes }}</td>
                   </tr>
+                  {% endif %}
                   <tr class="detail-row-last">
                     <th scope="row" class="detail-label">Reason</th>
                     <td class="detail-value pre-wrap">{{ custom.rescheduleReason }}</td>
