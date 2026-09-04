@@ -1,6 +1,7 @@
 <!--
     templateType: email
     isAvailableForNewContent: true
+    isEnabledForEmailV3Rendering: true
 -->
 <!DOCTYPE html>
 <html>
@@ -87,12 +88,12 @@
                     <th scope="row" class="detail-label">Amount</th>
                     <td class="detail-value">{{ custom.appointmentCost }}</td>
                   </tr>
-                  {% if custom.status and custom.status != "" %}
+                  {% if custom.status|default("", true)|trim %}
                   <tr>
                     <th scope="row" class="detail-label">Status</th>
                     <td class="detail-value">{{ custom.status }}</td>
                   </tr>
-                  {% endif %} {% if custom.paymentMethod and custom.paymentMethod != "" %}
+                  {% endif %} {% if custom.paymentMethod|default("", true)|trim %}
                   <tr>
                     <th scope="row" class="detail-label">Payment Method</th>
                     <td class="detail-value">{{ custom.paymentMethod }}</td>
