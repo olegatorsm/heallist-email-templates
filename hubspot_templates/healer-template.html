@@ -81,6 +81,13 @@
                     <td class="detail-value">{{ custom.platformName }}</td>
                     {% endif %}
                   </tr>
+                  {% endif %} {% if custom.guestCallUrl and custom.guestCallUrl != "" %}
+                  <tr>
+                    <th scope="row" class="detail-label">Link to join</th>
+                    <td class="detail-value">
+                      <a class="text-link" href="{{ custom.guestCallUrl }}" target="_blank">{{ custom.guestCallUrl }}</a>
+                    </td>
+                  </tr>
                   {% endif %}
                   <tr>
                     <th scope="row" class="detail-label">Client</th>
