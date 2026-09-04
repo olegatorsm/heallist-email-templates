@@ -1,6 +1,7 @@
 <!--
     templateType: email
     isAvailableForNewContent: true
+    isEnabledForEmailV3Rendering: true
 -->
 <!DOCTYPE html>
 <html>
@@ -81,7 +82,7 @@
                     <td class="detail-value">{{ custom.platformName }}</td>
                     {% endif %}
                   </tr>
-                  {% endif %} {% if custom.guestCallUrl and custom.guestCallUrl != "" %}
+                  {% endif %} {% if custom.guestCallUrl|default("", true)|trim %}
                   <tr>
                     <th scope="row" class="detail-label">Link to join</th>
                     <td class="detail-value">
@@ -103,7 +104,7 @@
                     <th scope="row" class="detail-label">Phone</th>
                     <td class="detail-value">{{ custom.clientPhone }}</td>
                   </tr>
-                  {% if custom.notes and custom.notes != "" %}
+                  {% if custom.notes|default("", true)|trim %}
                   <tr class="detail-row-last">
                     <th scope="row" class="detail-label">Notes</th>
                     <td class="detail-value pre-wrap">{{ custom.notes }}</td>
