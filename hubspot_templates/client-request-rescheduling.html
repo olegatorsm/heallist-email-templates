@@ -90,16 +90,17 @@
                     <th scope="row" class="detail-label">Phone</th>
                     <td class="detail-value">{{ custom.healerPhone }}</td>
                   </tr>
-                  {% if custom.notes and custom.notes != "" %}
+                  {% if custom.notes|default("", true)|trim %}
                   <tr>
                     <th scope="row" class="detail-label">Notes</th>
                     <td class="detail-value pre-wrap">{{ custom.notes }}</td>
                   </tr>
-                  {% endif %}
+                  {% endif %} {% if custom.rescheduleReason|default("", true)|trim %}
                   <tr class="detail-row-last">
                     <th scope="row" class="detail-label">Reason</th>
                     <td class="detail-value pre-wrap">{{ custom.rescheduleReason }}</td>
                   </tr>
+                  {% endif %}
                 </table>
                 <div class="action-row-centered">
                   {# {% if custom.showActions == true %}
