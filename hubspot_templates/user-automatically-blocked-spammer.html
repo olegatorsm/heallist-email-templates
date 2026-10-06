@@ -1,0 +1,66 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+    isEnabledForEmailV3Rendering: true
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ custom.subject }}</title>
+    {% include "./partials/email-styles.html" %}
+  </head>
+  <body bgcolor="#f0f0f2">
+    <div id="preview_text" style="display: none; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; opacity: 0; overflow: hidden">
+      {% text "preview_text" label="Preview Text", value="A user was automatically blocked from sending messages. Please review.", no_wrapper=True %}
+    </div>
+
+    <table role="presentation" width="100%" bgcolor="#f0f0f2" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="page-cell" align="center" bgcolor="#f0f0f2">
+          <table role="presentation" class="email-shell" width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0">
+            {% include "./partials/header.html" %}
+            <tr>
+              <td class="email-body">
+                <p class="greeting-title">Automatic spam block</p>
+                <p class="body-copy muted-copy copy-spacer">ChatSpamGuard flagged an outgoing message as spam and blocked the sender from sending messages. This was an automatic action, not a user report.</p>
+                <table role="presentation" class="detail-table" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr class="detail-row-first">
+                    <th scope="row" class="detail-label">Blocked user</th>
+                    <td class="detail-value">{{ custom.spammerName }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="detail-label">User ID</th>
+                    <td class="detail-value">{{ custom.spammerId }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="detail-label">Intended recipient</th>
+                    <td class="detail-value">{{ custom.recipientName }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="detail-label">Recipient ID</th>
+                    <td class="detail-value">{{ custom.recipientId }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="detail-label">Blocked at (UTC)</th>
+                    <td class="detail-value">{{ custom.blockedAt }}</td>
+                  </tr>
+                  <tr class="detail-row-last">
+                    <th scope="row" class="detail-label">Message status</th>
+                    <td class="detail-value">Rejected. Not delivered or saved.</td>
+                  </tr>
+                </table>
+                <p class="body-title" style="margin-top: 28px">Rejected message</p>
+                <p class="helper-text">Untrusted user content is shown below as plain text.</p>
+                <div class="body-copy pre-wrap" style="margin-top: 12px; padding: 16px; border: 1px solid #e4e2e2; border-radius: 8px; background-color: #f0f0f2; overflow-wrap: anywhere">{{ custom.messageText }}</div>
+                <p class="body-copy copy-spacer">Please review this block.</p>
+              </td>
+            </tr>
+            {% include "./partials/footer.html" %}
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -3,7 +3,7 @@
   "environment": "published",
   "remote_root": "/",
   "selection": "templates",
-  "generated_at": "2026-08-24T08:26:59.661990+00:00",
+  "generated_at": "2026-10-06T20:58:36.828138+00:00",
   "files": {
     "healer-cancel-retreat-template.html": {
       "local_path": "healer-cancel-retreat-template.html",
@@ -33,7 +33,7 @@
       "local_path": "partials/header.html",
       "sha256": "e17601e936b45db5e7bde9aad24fe4cdb21c66f3813cbc65e98c7b8e5148cf99",
       "hubspot_hash": "c96ad40e604926c90dd16cb1a436df44",
-      "updated_at": 1787561302253
+      "updated_at": 1787561336473
     },
     "partials/email-styles.html": {
       "local_path": "partials/email-styles.html",
@@ -45,7 +45,7 @@
       "local_path": "partials/footer.html",
       "sha256": "b331cf6b7c853709730d92badfd0d61bfebddf431696c2006aa2c798f26f10ec",
       "hubspot_hash": "b3e139289dfef3518a115cef836c011d",
-      "updated_at": 1787561301019
+      "updated_at": 1787561334151
     },
     "healer-review-created.html": {
       "local_path": "healer-review-created.html",
@@ -93,7 +93,7 @@
       "local_path": "footer.html",
       "sha256": "58528f5928081ba96e04b4af84ff3ec88626f12b738c26ea646d7a5ebdd5cb65",
       "hubspot_hash": "44e241f2e1e95f8e8da11e7ef18a2d34",
-      "updated_at": 1787561276739
+      "updated_at": 1787561425449
     },
     "client-transmission-cancel-template.html": {
       "local_path": "client-transmission-cancel-template.html",
@@ -220,6 +220,12 @@
       "sha256": "6807e57c5a0cfe84bb6844c237a73e0bfee245bd06165795ba524f10a8fe320a",
       "hubspot_hash": "00f4f08c8477077adb26147ef93bff31",
       "updated_at": 1790020232693
+    },
+    "user-automatically-blocked-spammer.html": {
+      "local_path": "user-automatically-blocked-spammer.html",
+      "sha256": "303994a3b2133d8e4998ce5f0b4886f3191badad2477b85010e723653da4ad89",
+      "hubspot_hash": "82e3a3a927318b90ec43d4870a9dccc2",
+      "updated_at": 1791321098770
     }
   }
 }
