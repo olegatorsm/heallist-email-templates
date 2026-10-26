@@ -116,7 +116,7 @@
                 </div>
                 <div class="fine-print">
                   <p>** Payments: The payout is subject to processing fees and will be paid out 24 hrs after the service completion.</p>
-                  <p class="fine-print-spacer">** Cancellation: Clients are able to cancel any service up to 24 hrs prior to its start time for a full refund.</p>
+                  <p class="fine-print-spacer">** Cancellation: Clients are able to cancel any service up to {{ custom.freeCancellationWindow|default("24 hours", true) }} prior to its start time for a full refund.</p>
                 </div>
               </td>
             </tr>
