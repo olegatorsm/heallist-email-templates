@@ -193,7 +193,8 @@
   .action-buttons {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    /* Gmail drops the gap shorthand but keeps column-gap in flexbox */
+    column-gap: 12px;
     padding-top: 32px;
   }
 
