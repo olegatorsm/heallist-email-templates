@@ -190,17 +190,18 @@
     text-align: center;
   }
 
+  /* inline-block buttons centered with text-align: Gmail ignores the flexbox
+     sizing and alignment; font-size 0 drops the space between the links so
+     the margins alone make the 12px gap */
   .action-buttons {
-    display: flex;
-    justify-content: space-between;
-    /* Gmail drops the gap shorthand but keeps column-gap in flexbox */
-    column-gap: 12px;
     padding-top: 32px;
+    font-size: 0;
+    text-align: center;
   }
 
   .action-buttons .action-button {
-    flex: 1 1 0;
-    min-width: 0;
+    margin: 0 6px;
+    vertical-align: middle;
   }
 
   .action-button {
@@ -377,13 +378,10 @@
       width: 66% !important;
     }
 
-    .action-buttons {
-      display: block !important;
-    }
-
     .action-buttons .action-button {
       display: block !important;
       width: 100% !important;
+      margin: 0 !important;
     }
 
     .action-buttons .action-button + .action-button {
