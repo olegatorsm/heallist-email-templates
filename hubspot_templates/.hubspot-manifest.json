@@ -37,9 +37,9 @@
     },
     "partials/email-styles.html": {
       "local_path": "partials/email-styles.html",
-      "sha256": "f144aaee2d8d10968b4eebf22ff44d80efa54ad5f255af3126f65747d7fdcb38",
-      "hubspot_hash": "d7993f0d4ff42588a4257cd6280e08c2",
-      "updated_at": 1787562185922
+      "sha256": "0c6630ecff6529234370dce8f95205deaf387c1d25cf1dee337343f781c42673",
+      "hubspot_hash": "8bb68ca5253e70836d10428eafb4fb2c",
+      "updated_at": 1793700189414
     },
     "partials/footer.html": {
       "local_path": "partials/footer.html",
