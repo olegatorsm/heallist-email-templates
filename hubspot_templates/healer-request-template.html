@@ -105,9 +105,18 @@
                   {% endif %}
                 </table>
                 <div class="action-buttons">
-                  <a class="action-button action-button-wide action-button-secondary" href="{{ custom.confirmRequestUrl }}" target="_blank">Decline</a>
-                  {# {% if custom.canReschedule and custom.canReschedule != '' %}<a class="action-button action-button-wide action-button-secondary" href="{{ custom.confirmRequestUrl }}" target="_blank">Reschedule</a>{% endif %} #}
-                  <a class="action-button action-button-wide" href="{{ custom.confirmRequestUrl }}" target="_blank"><span style="color: #ffffff">{{ custom.submit }}</span></a>
+                  <table role="presentation" class="action-buttons-table" align="center" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td class="action-buttons-cell">
+                        <a class="action-button action-button-wide action-button-secondary" href="{{ custom.confirmRequestUrl }}" target="_blank">Decline</a>
+                      </td>
+                      {# {% if custom.canReschedule and custom.canReschedule != '' %}<a class="action-button action-button-wide action-button-secondary" href="{{ custom.confirmRequestUrl }}" target="_blank">Reschedule</a>{% endif %} #}
+                      <td class="action-buttons-spacer" width="12">&nbsp;</td>
+                      <td class="action-buttons-cell">
+                        <a class="action-button action-button-wide" href="{{ custom.confirmRequestUrl }}" target="_blank"><span style="color: #ffffff">{{ custom.submit }}</span></a>
+                      </td>
+                    </tr>
+                  </table>
                 </div>
                 <div class="fine-print">
                   <p>** Payments: The payout is subject to processing fees and will be paid out 24 hrs after the service completion.</p>
