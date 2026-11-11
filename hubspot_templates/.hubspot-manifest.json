@@ -13,9 +13,9 @@
     },
     "healer-request-template.html": {
       "local_path": "healer-request-template.html",
-      "sha256": "8a21981d39e3ea9b62ad5cc296bf48498b866ad66e817e63d63e3b79b8eb5a8d",
-      "hubspot_hash": "cc2c2e7d12a1a7df6c3f576a225394be",
-      "updated_at": 1793700635068
+      "sha256": "d210513d03dcf10aa26026789056627c50068e30f2dde5e280ea0930aebf3da2",
+      "hubspot_hash": "0000cd43389375ca92db6df9d473f8aa",
+      "updated_at": 1794407452491
     },
     "healer-cancel-template.html": {
       "local_path": "healer-cancel-template.html",
@@ -55,9 +55,9 @@
     },
     "healer-template.html": {
       "local_path": "healer-template.html",
-      "sha256": "58590d0ba1bd62ac3b576050219b8427dae1ce8a64d07cf0c7c0f9f8623a83bb",
-      "hubspot_hash": "a6b430b2a266c27c79f358f1815aea70",
-      "updated_at": 1793451956809
+      "sha256": "9e04276be35081b480f3232dfd18b6f23f73f7d781f50560a3f282577bf723fb",
+      "hubspot_hash": "e06b59c2aa326223546936f607b92160",
+      "updated_at": 1794407454969
     },
     "client-retreat-template.html": {
       "local_path": "client-retreat-template.html",
@@ -103,15 +103,15 @@
     },
     "healer-rescheduling.html": {
       "local_path": "healer-rescheduling.html",
-      "sha256": "69e3275d68764d5f4431b48a20c2a2091d51de562789677419f62b17c5ed506e",
-      "hubspot_hash": "435355a256384952ef878ec3cd11c564",
-      "updated_at": 1793451956145
+      "sha256": "0cb263242814f075fdd561ee4c20c668f673b2f28460683e36aac6e3cf174c68",
+      "hubspot_hash": "05bbb4935132882f9d57b94bec7cc1fc",
+      "updated_at": 1794407453549
     },
     "client-request-reminder-template.html": {
       "local_path": "client-request-reminder-template.html",
-      "sha256": "da698f9fdf1b0ee9cc994820c282d490303615433616eae7eb0613bc688d7cd8",
-      "hubspot_hash": "3ef22581398960f59e05f9330a01a935",
-      "updated_at": 1793451952933
+      "sha256": "fa80b39c45b2bdfec6fdd1ed2ebd7159deab7c778f02a85681a12ca693dc1408",
+      "hubspot_hash": "da6770e98ad80c21a329b57b16764909",
+      "updated_at": 1794407449503
     },
     "message-recieved-with-header.html": {
       "local_path": "message-recieved-with-header.html",
@@ -169,9 +169,9 @@
     },
     "client-template.html": {
       "local_path": "client-template.html",
-      "sha256": "c8b897da5e2fe0a4bc8322f3e572d70f5f97b25f87a168f3a9a0ac3f8c740638",
-      "hubspot_hash": "28ae1fe41d94bcc7bb7085b58ff4e179",
-      "updated_at": 1793451954664
+      "sha256": "b4d71a1350c5afd92e12630fde5890514521e1bd8e248a0e655118aa0ee5cf11",
+      "hubspot_hash": "4e9f80caf9ac37c28c34e8b3af1b414d",
+      "updated_at": 1794407451567
     },
     "healer-transmission-cancel-template.html": {
       "local_path": "healer-transmission-cancel-template.html",
@@ -181,9 +181,9 @@
     },
     "client-request-rescheduling.html": {
       "local_path": "client-request-rescheduling.html",
-      "sha256": "def2c7c4668d53ac72e6b0ad8792b3140afff87a0c88225e7a2a0487f187c2e7",
-      "hubspot_hash": "de5101e5101bceef9f57b4a44fa47814",
-      "updated_at": 1793451953838
+      "sha256": "d9e845d085852351d0f38ece24a6660f6cf7678c0d3c83e0a191be4903b8b4d4",
+      "hubspot_hash": "5e745c0fce2e95b438c666ed6d2b2140",
+      "updated_at": 1794407450603
     },
     "healer-template-with-header.html": {
       "local_path": "healer-template-with-header.html",
