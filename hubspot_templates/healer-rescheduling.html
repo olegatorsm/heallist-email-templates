@@ -37,7 +37,7 @@
             <tr>
               <td class="email-body">
                 <p class="greeting-title">Hi {{ custom.healerFullName }}</p>
-                <p class="body-copy muted-copy copy-spacer">{{ custom.description }}</p>
+                <div class="body-copy muted-copy copy-spacer">{% raw %}{{custom.description}}{% endraw %}</div>
                 <p class="body-title copy-spacer">{{ custom.appointmentName }}</p>
                 <table role="presentation" class="detail-table appointment-detail-table" width="100%" cellpadding="0" cellspacing="0" border="0">
                   <tr class="detail-row-first">
@@ -109,7 +109,6 @@
                 </div>
                 <div class="fine-print">
                   <p>** Payments: The payout is subject to processing fees and will be paid out 24 hrs after the service completion.</p>
-                  <p class="fine-print-spacer">** Cancellation: Clients are able to cancel any service up to 24 hrs prior to its start time for a full refund.</p>
                 </div>
               </td>
             </tr>

@@ -38,7 +38,7 @@
             <tr>
               <td class="email-body">
                 <p class="greeting-title">Hi {{ custom.clientUsername }}</p>
-                <p class="body-copy muted-copy copy-spacer">{{ custom.description }}</p>
+                <div class="body-copy muted-copy copy-spacer">{% raw %}{{custom.description}}{% endraw %}</div>
                 <p class="body-title copy-spacer">{{ custom.appointmentName }}</p>
                 <table role="presentation" class="detail-table appointment-detail-table" width="100%" cellpadding="0" cellspacing="0" border="0">
                   <tr class="detail-row-first">
@@ -105,7 +105,6 @@
                     <span style="color: #ffffff">{{ custom.submit }}</span>
                   </a>
                 </div>
-                <p class="policy-text">CANCELLATION POLICY: Cancellations made less than 24 hours prior to the session start time are not refundable.</p>
               </td>
             </tr>
             {% include "./partials/footer.html" %}
